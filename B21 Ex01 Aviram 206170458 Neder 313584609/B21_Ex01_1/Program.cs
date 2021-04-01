@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Ex01
 {
     /**
@@ -15,36 +16,37 @@ namespace Ex01
         public static void Main()
         {
             initiateProgram();
+            
         }
 
         private static void initiateProgram()
         {
-            string[] BinaryStrNumArray = ReadBinaryNumsArray(); //Reads binary numbers as strings and validates their format, 
-            int[] binaryConvertedToDecimalArray = ConvertToDecimalArray(BinaryStrNumArray); //converts all binary strings to decimal numbers.
-            PrintDecimalArray(binaryConvertedToDecimalArray); //Prints the array of decimal numbers
-            PrintStatistics(BinaryStrNumArray, binaryConvertedToDecimalArray);
+            string[] binaryStrNumArray = readBinaryNumsArray(); //Reads binary numbers as strings and validates their format, 
+            int[] binaryConvertedToDecimalArray = convertToDecimalArray(binaryStrNumArray); //converts all binary strings to decimal numbers.
+            printDecimalArray(binaryConvertedToDecimalArray); //Prints the array of decimal numbers.
+            printStatistics(binaryStrNumArray, binaryConvertedToDecimalArray);
 
             Console.ReadLine();
             
         }
 
-        private static void PrintDecimalArray(int[] binaryConvertedToDecimalArray)
+        private static void printDecimalArray(int[] binaryConvertedToDecimalArray)
         {
             Console.WriteLine("The decimal representation of the inputs are (respectively):");
             for (int i = 0; i < k_numOfInput; i++)
             {
-                Console.WriteLine(@"{0:F}", binaryConvertedToDecimalArray[i]);
+                Console.WriteLine(@"{0}", binaryConvertedToDecimalArray[i]);
             }
         }
 
-        private static int[] ConvertToDecimalArray(string[] i_BinaryStrNumArray)
+        private static int[] convertToDecimalArray(string[] i_BinaryStrNumArray)
         {
-            int[] binaryConvertedToDecmial = new int[k_numOfInput];
+            int[] binaryConvertedToDecimal = new int[k_numOfInput];
             for (int i = 0; i < k_numOfInput; i++)
             {
-                binaryConvertedToDecmial[i] = ConvertBinaryStrToDecimal(i_BinaryStrNumArray[i]);
+                binaryConvertedToDecimal[i] = ConvertBinaryStrToDecimal(i_BinaryStrNumArray[i]);
             }
-            return binaryConvertedToDecmial;
+            return binaryConvertedToDecimal;
         }
 
         private static int ConvertBinaryStrToDecimal(string i_BinaryStr)
@@ -61,7 +63,7 @@ namespace Ex01
             return decimalNum;
         }
 
-        private static string[] ReadBinaryNumsArray()
+        private static string[] readBinaryNumsArray()
         {
             string[] binaryNumbersArray = new string[k_numOfInput];
             for (int i = 0; i < k_numOfInput; i++)
@@ -110,16 +112,16 @@ and press enter ", k_lengthOfInput);
             return isBinary;
         }
 
-        private static void PrintStatistics(string[] i_binaryStrNumArray, int[] i_binaryConvertedToDecimalArray)
+        private static void printStatistics(string[] i_binaryStrNumArray, int[] i_binaryConvertedToDecimalArray)
         {
             PrintAverageZeros(i_binaryStrNumArray);
             PrintAverageOnes(i_binaryStrNumArray);
             PrintPowerofTwo(i_binaryConvertedToDecimalArray);
             PrintAscendingSeriesofDigits(i_binaryConvertedToDecimalArray);
-            PrintMinAndMaxNum(i_binaryConvertedToDecimalArray);
+            printMinAndMaxNum(i_binaryConvertedToDecimalArray);
         }
 
-        private static void PrintMinAndMaxNum(int[] i_binaryConvertedToDecimalArray)
+        private static void printMinAndMaxNum(int[] i_binaryConvertedToDecimalArray)
         {
             int minNumIndex = 0;
             int maxNumIndex = 0;
@@ -147,15 +149,32 @@ and press enter ", k_lengthOfInput);
                     counterOfAscendingSeriesNumbers++;
                 }
             }
-            Console.WriteLine("there are {0} inputs whos decimal representation is an ascending order", counterOfAscendingSeriesNumbers);
+            if (counterOfAscendingSeriesNumbers == 1)
+            {
+                Console.WriteLine("there is {0} input whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
+            } else
+            {
+                Console.WriteLine("there are {0} inputs whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
+            }
         }
 
         private static bool isAscendingSeries(int i_binaryNumConvertedToDecimal)
         {
             bool isAscedingSeries = true;
-            // Implementing with a string seems easier, as using numbers will require logs and stuff.
-            // But with Guy you never know what he expects.
-            // Do what you think :)
+            int digitsOfUnit;
+            int digitsOfTens;
+            while (i_binaryNumConvertedToDecimal != 0)
+            {
+                digitsOfUnit = i_binaryNumConvertedToDecimal % 10;
+                i_binaryNumConvertedToDecimal /= 10;
+                digitsOfTens = i_binaryNumConvertedToDecimal % 10;
+                if (digitsOfTens >= digitsOfUnit)
+                {
+                    isAscedingSeries = false;
+                    break;
+                }
+
+            }
             return isAscedingSeries;
         }
 
@@ -169,7 +188,13 @@ and press enter ", k_lengthOfInput);
                     counterOfPowerOfTwo++;
                 }
             }
-            Console.WriteLine("There are {0} numbers that are power of two", counterOfPowerOfTwo);
+            if(counterOfPowerOfTwo == 1)
+            {
+                Console.WriteLine("There is {0} number that is a power of two", counterOfPowerOfTwo);
+            } else
+            {
+                Console.WriteLine("There are {0} numbers that are power of two", counterOfPowerOfTwo);
+            }
         }
 
         private static bool isPowerOfTwo(int i_BinaryNumConvertedToDecimal)
@@ -196,7 +221,7 @@ and press enter ", k_lengthOfInput);
             {
                 numOfOnes += countStrChar(i_binaryStrNumArray[i], k_charToCheck);
             }
-            float averageOnes = ((float)numOfOnes / (float)i_binaryStrNumArray.Length); //TODO: CHANGE HERE
+            float averageOnes = ((float)numOfOnes / (float)i_binaryStrNumArray.Length); 
             Console.WriteLine("The average number of ones is {0}", averageOnes);
         }
 
@@ -208,7 +233,7 @@ and press enter ", k_lengthOfInput);
             {
                 numOfZeros += countStrChar(i_binaryStrNumArray[i], k_charToCheck);
             }
-            double averageZeros = numOfZeros / i_binaryStrNumArray.Length;
+            float averageZeros = (float)numOfZeros / (float)i_binaryStrNumArray.Length;
             Console.WriteLine("The average number of zeros is {0}", averageZeros);
         }
 
