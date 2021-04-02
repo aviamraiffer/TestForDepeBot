@@ -1,0 +1,16 @@
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.exe
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.deps.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.runtimeconfig.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.runtimeconfig.dev.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\ref\B21_Ex01_2.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\bin\Debug\net5.0\B21_Ex01_2.pdb
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.csprojAssemblyReference.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.AssemblyInfoInputs.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.AssemblyInfo.cs
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.csproj.CoreCompileInputs.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\ref\B21_Ex01_2.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.pdb
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_2\obj\Debug\net5.0\B21_Ex01_2.genruntimeconfig.cache
