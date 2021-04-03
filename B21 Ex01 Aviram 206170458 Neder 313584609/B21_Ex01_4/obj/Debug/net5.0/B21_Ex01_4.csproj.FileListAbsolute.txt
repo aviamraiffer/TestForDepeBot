@@ -1,0 +1,16 @@
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.AssemblyInfoInputs.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.AssemblyInfo.cs
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.csproj.CoreCompileInputs.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.exe
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.deps.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.runtimeconfig.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.runtimeconfig.dev.json
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\ref\B21_Ex01_4.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\bin\Debug\net5.0\B21_Ex01_4.pdb
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\ref\B21_Ex01_4.dll
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.pdb
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.genruntimeconfig.cache
+C:\Users\Amfi\Source\Repos\Ex1\B21 Ex01 Aviram 206170458 Neder 313584609\B21_Ex01_4\obj\Debug\net5.0\B21_Ex01_4.csprojAssemblyReference.cache
