@@ -195,7 +195,7 @@ and press enter ", k_lengthOfInput);
         {
             bool o_isPowerOfTwo = false;
             o_isPowerOfTwo = i_binaryNumConvertedToDecimal == 1; // Edge case for 2^0.
-            while (IsEven(i_binaryNumConvertedToDecimal)) // As long as the number is even, check if it equals to 2 and divide it by 2.
+            while (isEven(i_binaryNumConvertedToDecimal)) // As long as the number is even, check if it equals to 2 and divide it by 2.
             {
                 o_isPowerOfTwo = i_binaryNumConvertedToDecimal == 2;
                 i_binaryNumConvertedToDecimal /= 2;
@@ -203,10 +203,9 @@ and press enter ", k_lengthOfInput);
             return o_isPowerOfTwo;
         }
 
-        public static bool IsEven(int i_binaryNumConvertedToDecimal)
+        private static bool isEven(int i_binaryNumConvertedToDecimal)
         {
-            bool o_isEven = true;
-            o_isEven = i_binaryNumConvertedToDecimal % 2 == 0; // If division by 2 has no remainder, then the number is indeed even.
+            bool o_isEven = i_binaryNumConvertedToDecimal % 2 == 0; // If division by 2 has no remainder, then the number is indeed even.
             return o_isEven;
         }
 
