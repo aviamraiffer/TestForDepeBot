@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ex01
+namespace B21_Ex01_1
 {
     /*
      * in isEven, shouldn't we just return the condition? ask Itamar. 
@@ -20,9 +20,6 @@ namespace Ex01
             int[] binaryConvertedToDecimalArray = convertToDecimalArray(binaryStrNumArray); //converts all binary strings to decimal numbers.
             printDecimalArray(binaryConvertedToDecimalArray); //Prints the array of decimal numbers.
             printStatistics(binaryStrNumArray, binaryConvertedToDecimalArray); //Prints statistics regarding binary numbers and their decimal presentation.
-
-            Console.WriteLine("Press ENTER to terminate the program");
-            Console.ReadLine();
         }
 
         private static void printDecimalArray(int[] i_binaryConvertedToDecimalArray)
@@ -198,7 +195,7 @@ and press enter ", k_lengthOfInput);
         {
             bool o_isPowerOfTwo = false;
             o_isPowerOfTwo = i_binaryNumConvertedToDecimal == 1; // Edge case for 2^0.
-            while (isEven(i_binaryNumConvertedToDecimal)) // As long as the number is even, check if it equals to 2 and divide it by 2.
+            while (IsEven(i_binaryNumConvertedToDecimal)) // As long as the number is even, check if it equals to 2 and divide it by 2.
             {
                 o_isPowerOfTwo = i_binaryNumConvertedToDecimal == 2;
                 i_binaryNumConvertedToDecimal /= 2;
@@ -206,7 +203,7 @@ and press enter ", k_lengthOfInput);
             return o_isPowerOfTwo;
         }
 
-        private static bool isEven(int i_binaryNumConvertedToDecimal)
+        public static bool IsEven(int i_binaryNumConvertedToDecimal)
         {
             bool o_isEven = true;
             o_isEven = i_binaryNumConvertedToDecimal % 2 == 0; // If division by 2 has no remainder, then the number is indeed even.
