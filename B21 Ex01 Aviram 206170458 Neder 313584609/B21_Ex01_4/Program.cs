@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace EX01
+namespace B21_Ex01_4
 {
-    public class Program4
+    public class Program
     {
         const int k_lengthOfInput = 10;
         public static void Main()
@@ -28,39 +28,31 @@ namespace EX01
             return o_validStr;
         }
 
-        private static bool isValid(string i_validetStr)
+        private static bool isValid(string i_aValidStr)
         {
             // Checks if the stirng is of valid length and either digits only or letters only.
-            bool o_isValid = isOfProperLength(i_validetStr) && (isNumStr(i_validetStr) || isALetterStr(i_validetStr));
+            bool o_isValid = isOfProperLength(i_aValidStr) && (isNumStr(i_aValidStr) || isALetterStr(i_aValidStr));
             return o_isValid;
         }
 
-        private static bool isOfProperLength(string i_validetStr)
+        private static bool isOfProperLength(string i_aValidStr)
         {
-            bool o_isOfPrperLength = i_validetStr.Length == k_lengthOfInput;
+            bool o_isOfPrperLength = i_aValidStr.Length == k_lengthOfInput;
             return o_isOfPrperLength;
         }
 
-        private static bool isNumStr(string i_validStr)
+        private static bool isNumStr(string i_aValidStr)
         {
-            bool o_isANum = true;
-            for (int i = 0; i < i_validStr.Length; i++)
-            {
-                if (!char.IsDigit(i_validStr[i])) // If there's a character which is not a digit, returns false.
-                {
-                    o_isANum = false;
-                    break;
-                }
-            }
-            return o_isANum;
+            bool o_isNaturalNumberStr = int.TryParse(i_aValidStr, out int parseResult) && parseResult > 0;
+            return o_isNaturalNumberStr;
         }
 
-        private static bool isALetterStr(string i_validetStr)
+        private static bool isALetterStr(string i_aValidStr)
         {
             bool o_isALetterStr = true;
-            for (int i = 0; i < i_validetStr.Length; i++)
+            for (int i = 0; i < i_aValidStr.Length; i++)
             {
-                if (!char.IsLetter(i_validetStr[i])) // If there's a character which is not a letter, returns false.
+                if (!char.IsLetter(i_aValidStr[i])) // If there's a character which is not a letter, returns false.
                 {
                     o_isALetterStr = false;
                     break;
@@ -69,11 +61,11 @@ namespace EX01
             return o_isALetterStr;
         }
 
-        private static void printStringAnalysis(string i_validStr)
+        private static void printStringAnalysis(string i_aValidStr)
         {
-            printIsItAPalindrom(i_validStr);
-            bool isADigitStr = isNumStr(i_validStr);
-            printDivInFourOrNumOfCapital(i_validStr); // If the input is a number prints if its dividable by 4. If it's a string of letters prints the number of capitals in the string.
+            printIsItAPalindrom(i_aValidStr);
+            bool isADigitStr = isNumStr(i_aValidStr);
+            printDivInFourOrNumOfCapital(i_aValidStr); // If the input is a number prints if its dividable by 4. If it's a string of letters prints the number of capitals in the string.
         }
 
         private static void printIsItAPalindrom(string i_aValidStr)
@@ -111,21 +103,21 @@ namespace EX01
             return o_isAPal;
         }
 
-        private static void printDivInFourOrNumOfCapital(string i_validStr)
+        private static void printDivInFourOrNumOfCapital(string i_aValidStr)
         {
-            if (isNumStr(i_validStr))
+            if (isNumStr(i_aValidStr))
             {
-                printIsDivByFour(i_validStr);
+                printIsDivByFour(i_aValidStr);
             }
             else
             {
-                printNumOfCapital(i_validStr);
+                printNumOfCapital(i_aValidStr);
             }
         }
 
-        private static void printIsDivByFour(string i_validNumStr)
+        private static void printIsDivByFour(string i_aValidStr)
         {
-            ulong convertedToNum = ulong.Parse(i_validNumStr);
+            ulong convertedToNum = ulong.Parse(i_aValidStr);
             bool isDivByFour = isDividableByFour(convertedToNum);
             if (isDivByFour)
             {
@@ -143,20 +135,20 @@ namespace EX01
             return o_isDivByFour;
         }
 
-        private static void printNumOfCapital(string i_validStr)
+        private static void printNumOfCapital(string i_aValidStr)
         {
-            int capitalCounter = countCapitals(i_validStr);
+            int capitalCounter = countCapitals(i_aValidStr);
 
             Console.WriteLine("The number of capital letters in the input is {0}", capitalCounter);
 
         }
 
-        private static int countCapitals(string i_validStr)
+        private static int countCapitals(string i_aValidStr)
         {
             int o_numOfCapital = 0;
-            for (int i = 0; i < i_validStr.Length; i++)
+            for (int i = 0; i < i_aValidStr.Length; i++)
             {
-                if (char.IsUpper(i_validStr[i]))
+                if (char.IsUpper(i_aValidStr[i]))
                 {
                     o_numOfCapital++;
                 }

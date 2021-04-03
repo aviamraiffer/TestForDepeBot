@@ -19,13 +19,19 @@ namespace B21_Ex01_3
 
         private static int patchEvenNumber(int io_heightOfSandClock)
         {
-            bool isEvenInput = B21_Ex01_1.Program.IsEven(io_heightOfSandClock); // Checks if the input is an even number.
+            bool isEvenInput = isEven(io_heightOfSandClock); // Checks if the input is an even number.
             if (isEvenInput)    // If it is an even number, increase it by 1 and inform the user.
             {
                 io_heightOfSandClock++;
                 Console.WriteLine("As a result of an even input, the desired height of the sand clock is changed to {0}.", io_heightOfSandClock);
             }
             return io_heightOfSandClock;
+        }
+
+        private static bool isEven(int i_binaryNumConvertedToDecimal)
+        {
+            bool o_isEven = i_binaryNumConvertedToDecimal % 2 == 0; // If division by 2 has no remainder, then the number is indeed even.
+            return o_isEven;
         }
 
         private static int readInput()
@@ -43,7 +49,7 @@ namespace B21_Ex01_3
 
         private static bool isValidInput(string i_heightOfSandClockStr)
         {
-            bool o_isValid = isAllDigits(i_heightOfSandClockStr) && !isEmpty(i_heightOfSandClockStr); // Checks if the input is a number and is not empty.
+            bool o_isValid = isNumStr(i_heightOfSandClockStr) && !isEmpty(i_heightOfSandClockStr); // Checks if the input is a number and is not empty.
             return o_isValid;
         }
 
@@ -53,19 +59,10 @@ namespace B21_Ex01_3
             return o_isEmpty;
         }
 
-        private static bool isAllDigits(string i_heightOfSandClockStr)
+        private static bool isNumStr(string i_heightOfSandClockStr)
         {
-            bool o_isAllDigits = true;
-            foreach (char c in i_heightOfSandClockStr) // Iterate through each char of the received string.
-            {
-                bool charIsDigit = Char.IsDigit(c);
-                if (!charIsDigit) // If a char is not a digit, assign o_isAllDigits to be false and exit the loop.
-                {
-                    o_isAllDigits = false;
-                    break;
-                }
-            }
-            return o_isAllDigits;
+            bool o_isNaturalNumberStr = int.TryParse(i_heightOfSandClockStr, out int parseResult) && parseResult > 0;
+            return o_isNaturalNumberStr;
         }
     }
 }
