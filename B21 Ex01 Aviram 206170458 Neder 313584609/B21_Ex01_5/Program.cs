@@ -30,8 +30,14 @@ namespace B21_Ex01_5
 
         private static bool isValidInput(string i_inputNum)
         {
-            bool o_isValidInput = i_inputNum.Length == k_numberOfDigits && isNaturalNumberStr(i_inputNum);
+            bool o_isValidInput = isOfProperLength(i_inputNum) && isNaturalNumberStr(i_inputNum);
             return o_isValidInput;
+        }
+
+        private static bool isOfProperLength(string i_inputNum)
+        {
+            bool o_isOfProperLength = i_inputNum.Length == k_numberOfDigits;
+            return o_isOfProperLength;
         }
 
         private static bool isNaturalNumberStr(string i_inputNum)
