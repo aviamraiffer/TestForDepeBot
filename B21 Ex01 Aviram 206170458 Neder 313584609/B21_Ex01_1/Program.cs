@@ -84,9 +84,14 @@ and press enter ", k_lengthOfInput);
 
         private static bool isValid(string i_binaryStr)
         {
-            bool o_isValid = false;
-            o_isValid = (i_binaryStr.Length == k_lengthOfInput && isBinary(i_binaryStr)); // Assigns valid to be true if it is indeed binary and of proper length.
+            bool o_isValid = (isOfProperLength(i_binaryStr) && isBinary(i_binaryStr)); // Assigns valid to be true if it is indeed binary and of proper length.
             return o_isValid;
+        }
+
+        private static bool isOfProperLength(string i_binaryStr)
+        {
+            bool o_isOfProperLength = i_binaryStr.Length == k_lengthOfInput;
+            return o_isOfProperLength
         }
 
         private static bool isBinary(string i_binaryStr)
@@ -143,11 +148,15 @@ and press enter ", k_lengthOfInput);
             }
             if (counterOfAscendingSeriesNumbers == 1) // Textual edge case.
             {
-                Console.WriteLine("there is {0} input whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
+                Console.WriteLine("There is {0} input whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
+            }
+            else if (counterOfAscendingSeriesNumbers > 1)
+            {
+                Console.WriteLine("There are {0} inputs whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
             }
             else
             {
-                Console.WriteLine("there are {0} inputs whos decimal representation is a strictly ascending order", counterOfAscendingSeriesNumbers);
+                Console.WriteLine("There are no inputs whos decimal representation is a strictly ascending order");
             }
         }
 
