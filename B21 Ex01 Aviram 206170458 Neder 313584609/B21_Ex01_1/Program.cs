@@ -2,9 +2,6 @@
 
 namespace B21_Ex01_1
 {
-    /*
-     * in isEven, shouldn't we just return the condition? ask Itamar. 
-     */
     public class Program
     {
         const int k_lengthOfInput = 7;
@@ -91,7 +88,7 @@ and press enter ", k_lengthOfInput);
         private static bool isOfProperLength(string i_binaryStr)
         {
             bool o_isOfProperLength = i_binaryStr.Length == k_lengthOfInput;
-            return o_isOfProperLength
+            return o_isOfProperLength;
         }
 
         private static bool isBinary(string i_binaryStr)
@@ -194,9 +191,13 @@ and press enter ", k_lengthOfInput);
             {
                 Console.WriteLine("There is {0} number that is a power of two", counterOfPowerOfTwo);
             }
-            else
+            else if (counterOfPowerOfTwo > 1)
             {
                 Console.WriteLine("There are {0} numbers that are power of two", counterOfPowerOfTwo);
+            }
+            else
+            {
+                Console.WriteLine("There are no numbers that are a power of two");
             }
         }
 
